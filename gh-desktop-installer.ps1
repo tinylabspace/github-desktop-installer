@@ -38,3 +38,7 @@ Start-Sleep -Seconds 10
 # Start GitHub Desktop
 Start-Process -FilePath $InstallPath
 Write-Host "GitHub Desktop is installed and should be running!" -ForegroundColor Green
+
+# delete the download
+write-host "Deleting the download" -ForegroundColor Green
+Remove-Item -Path $DownloadPath
