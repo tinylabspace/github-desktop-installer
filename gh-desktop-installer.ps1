@@ -12,8 +12,11 @@ if ($env:OS -notlike '*Windows*')
 }
 
 $DownloadUrl = "https://central.github.com/deployments/desktop/desktop/latest/win32"
-$DownloadPath = "$($downloadpath)\GitHubDesktopSetup.exe"
+$DownloadPath = "$($downloadpath)\GitHubDesktopSetup-x64.exe"
 $InstallPath = "$env:USERPROFILE\AppData\Local\GitHubDesktop\GitHubDesktop.exe"
+
+# hide the download progress to speed things up
+$ProgressPreference = 'SilentlyContinue'
 
 # Check if the download path exists, and create it if it doesn't
 if (-not (Test-Path -Path $DownloadPath))
