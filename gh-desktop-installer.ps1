@@ -4,6 +4,13 @@ param (
          [string]$downloadpath = "$($env:USERPROFILE)\downloads"
      )
 
+# Check if the OS is Windows, if not quit
+if ($env:OS -notlike '*Windows*')
+{
+    Write-Host "This script is designed to run on Windows, you can download GitHub Desktop on your OS from https://desktop.github.com/. Exiting..."
+    exit
+}
+
 $DownloadUrl = "https://central.github.com/deployments/desktop/desktop/latest/win32"
 $DownloadPath = "$($downloadpath)\GitHubDesktopSetup.exe"
 $InstallPath = "$env:USERPROFILE\AppData\Local\GitHubDesktop\GitHubDesktop.exe"

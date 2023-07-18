@@ -3,4 +3,4 @@ Simple script to automate the download, installation, and first launch of the la
 
 Usage: 
 
-.\gh-desktop-installer.ps1  -downloadpath "c:\somepath"
+.\gh-desktop-installer.ps1 -downloadpath "c:\somepath"
