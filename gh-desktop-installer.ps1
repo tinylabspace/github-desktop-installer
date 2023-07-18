@@ -1,4 +1,5 @@
 # accept a download path paramater or simply put it in the users downloads directory
+# usage .\gh-desktop-installer.ps1 -downloadpath "C:\tools"
 param (
          [string]$downloadpath = "$($env:USERPROFILE)\downloads"
      )
